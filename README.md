@@ -8,11 +8,6 @@ We provide http server
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/LasseHaslev/Kickstart/master/install.sh)"
 ```
 
-## Install
-``` bash
-npm install @lassehaslev/chord
-```
-
 ## Development
 ``` bash
 # install dependences
@@ -20,4 +15,7 @@ npm install
 
 # Open browser and watch for changes
 npm run dev
+
+#compile and minify resources
+npm run build
 ```
