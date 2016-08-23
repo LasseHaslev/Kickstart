@@ -1,0 +1,32 @@
+{
+  "name": "@lassehaslev/kickstart",
+  "version": "0.0.1",
+  "description": "Kickstart is a starter kit for creating and testing static sites.",
+  "main": "index.html",
+  "dependencies": {
+    "lost": "^7.0.4",
+    "normalize-styl": "^3.0.3",
+    "stylus": "^0.54.5"
+  },
+  "devDependencies": {
+    "@lassehaslev/chord": "0.0.1",
+    "npm-run-all": "^3.0.0",
+    "poststylus": "^0.2.3",
+    "reload": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "reload -b --exts html,styl",
+    "build": "stylus --use ./node_modules/poststylus --with \"['lost']\" --compress src/stylus/kickstart.styl -o  dist/css/kickstart.css",
+    "watch": "stylus --use ./node_modules/poststylus --with \"['lost']\" --watch src/stylus/kickstart.styl -o dist/css/kickstart.css",
+    "dev": "npm-run-all --parallel watch serve",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "style",
+    "application",
+    "stylus"
+  ],
+  "author": "Lasse S. Haslev <lasse@haslev.no>",
+  "license": "ISC"
+}
