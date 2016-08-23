@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # git clone
-git clone https://github.com/LasseHaslev/kickstart.git
+git clone https://github.com/LasseHaslev/Kickstart.git
 
 # Goto folder
 cd kickstart

@@ -5,7 +5,7 @@ We provide http server
 
 ## Quick start
 ``` bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/LasseHaslev/kickstart/master/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/LasseHaslev/Kickstart/master/install.sh)"
 ```
 
 ## Install
