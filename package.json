@@ -11,18 +11,22 @@
   "devDependencies": {
     "@lassehaslev/chord": "0.0.1",
     "browserify": "^13.1.0",
+    "browserify-hmr": "^0.3.1",
     "npm-run-all": "^3.0.0",
     "poststylus": "^0.2.3",
-    "reload": "^1.0.1"
+    "reload": "^1.0.1",
+    "uglify-js": "^2.7.3",
+    "watchify": "^3.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "reload -b --exts html,styl",
-    "build-style": "stylus --use ./node_modules/poststylus --with \"['lost']\" --compress src/stylus/kickstart.styl -o  dist/css/kickstart.css",
-    "watch-style": "stylus --use ./node_modules/poststylus --with \"['lost']\" --watch src/stylus/kickstart.styl -o dist/css/kickstart.css",
-    "browserify": "browserify src/js/main.js -o dist/js/kickstart.js",
-    "dev": "npm-run-all --parallel watch-style serve",
-    "prepublish": "npm run build-style"
+    "watchify": "watchify -vd -p browserify-hmr -e src/js/main.js -o dist/js/kickstart.js",
+    "serve": "reload -b --exts html,css,js",
+    "style-build": "stylus --use ./node_modules/poststylus --with \"['lost']\" --compress src/stylus/kickstart.styl -o  dist/css/kickstart.css",
+    "style-watch": "stylus --use ./node_modules/poststylus --with \"['lost']\" --watch src/stylus/kickstart.styl -o dist/css/kickstart.css",
+    "browserify": "browserify src/js/main.js | uglifyjs > dist/js/kickstart.js",
+    "dev": "npm-run-all --parallel watchify style-watch serve",
+    "prepublish": "npm run style-build; npm run browserify"
   },
   "keywords": [
     "style",
