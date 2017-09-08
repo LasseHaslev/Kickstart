@@ -17,4 +17,4 @@ rm -rf .git
 npm install
 
 # start server
-npm run dev
+npm run watch
