@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0"
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "bulma": "^0.5.1"
   },
   "devDependencies": {
     "@adapt-retail/adapt-mix-extender": "^0.0.1"

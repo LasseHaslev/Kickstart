@@ -10,13 +10,7 @@ $font-family: $google-font-name, sans-serif !default;
 // Replaces the spaces in $google-font-name to "+" so it can be found by google
 @import url( "https://fonts.googleapis.com/css?family=#{str-replace($google-font-name, " ", "+")}" );
 
-// Add default font style
-$font-size: 3.5vw !default;
-$font-color: black !default;
-
 // Append the settings to html element
 html, body {
     font-family: $font-family;
-    color: $font-color;
-    font-size: $font-size;
 }
