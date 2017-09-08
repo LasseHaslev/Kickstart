@@ -2,37 +2,22 @@
   "name": "@lassehaslev/kickstart",
   "version": "0.0.1",
   "description": "Kickstart is a starter kit for creating and testing static sites.",
+  "author": "Lasse S. Haslev <lasse@haslev.no>",
   "main": "index.html",
-  "dependencies": {
-    "lost": "^7.0.4",
-    "normalize-styl": "^3.0.3",
-    "stylus": "^0.54.5"
-  },
-  "devDependencies": {
-    "@lassehaslev/chord": "0.0.1",
-    "browserify": "^13.1.0",
-    "browserify-hmr": "^0.3.1",
-    "npm-run-all": "^3.0.0",
-    "poststylus": "^0.2.3",
-    "reload": "^1.0.1",
-    "uglify-js": "^2.7.3",
-    "watchify": "^3.7.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watchify": "watchify -vd -p browserify-hmr -e src/js/main.js -o dist/js/kickstart.js",
-    "serve": "reload -b --exts html,css,js",
-    "style-build": "stylus --use ./node_modules/poststylus --with \"['lost']\" --compress src/stylus/kickstart.styl -o  dist/css/kickstart.css",
-    "style-watch": "stylus --use ./node_modules/poststylus --with \"['lost']\" --watch src/stylus/kickstart.styl -o dist/css/kickstart.css",
-    "browserify": "browserify src/js/main.js | uglifyjs > dist/js/kickstart.js",
-    "dev": "npm-run-all --parallel watchify style-watch serve",
-    "prepublish": "npm run style-build; npm run browserify"
+    "development": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "npm run development",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production"
   },
-  "keywords": [
-    "style",
-    "application",
-    "stylus"
-  ],
-  "author": "Lasse S. Haslev <lasse@haslev.no>",
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "browser-sync-webpack-plugin": "^1.2.0"
+  },
+  "devDependencies": {
+    "@adapt-retail/adapt-mix-extender": "^0.0.1"
+  },
   "license": "ISC"
 }

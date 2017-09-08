@@ -1,5 +1,6 @@
-dist/
-npm-debug.log
 node_modules/
 .DS_Store
-tags
+yarn-error.log
+yarn.lock
+dist/
+mix-manifest.json
