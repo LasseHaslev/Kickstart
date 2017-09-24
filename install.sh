@@ -16,7 +16,6 @@ rm -rf .git
 # Remove Original Readme
 rm README.md
 
-read projectname;
 # Replace Project name variable to project name
 sed -i '' "s/{{Project}}/$projectname/g" KICKSTARTED_README.md
 
