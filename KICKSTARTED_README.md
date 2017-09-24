@@ -1,4 +1,4 @@
-# {{ProjectName}}
+# {{Project}}
 > This project is started using [Kickstart](https://github.com/LasseHaslev/Kickstart).
 > Kickstart your static projects with a type of a command.
 
