@@ -28,7 +28,31 @@ Copy paste that info into your browser on your external devices and watch the ma
 
 ### `npm run prod`
 The `npm run prod` command is minifying css and javascript and removes source maps.
-<!-- The prod command will also change `AdaptData` to `LightAdaptData`. -->
+
+### Files
+
+#### `index.html`
+
+Contains basic html to get you started.
+
+#### `src/`
+
+Contains both the style and javascript files.
+
+#### `webpack.mix.js`
+
+Contains the webpack configuration using [laravel-mix](https://github.com/JeffreyWay/laravel-mix).
+
+### Using npm
+
+This package comes with two preinstalled packages. 
+- [VueJs - JavaScript framework](https://vuejs.org/)
+- [Bulma - CSS framework based on Flexbox](https://bulma.io/)
+
+You are free to remove and install other packages using npm like:
+```bash
+npm install jquery
+```
 
 ## Development
 ``` bash
@@ -36,7 +60,7 @@ The `npm run prod` command is minifying css and javascript and removes source ma
 npm install
 
 # Open browser and watch for changes
-npm run watch
+npm run dev
 
 #compile and minify resources
 npm run build
