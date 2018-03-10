@@ -13,13 +13,14 @@
     "prod": "npm run production"
   },
   "dependencies": {
-    "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0",
     "bulma": "^0.5.1",
     "vue": "^2.4.4"
   },
   "devDependencies": {
-    "@adapt-retail/adapt-mix-extender": "^0.0.1"
+    "@adapt-retail/adapt-mix-extender": "0.0.1",
+    "browser-sync": "^2.23.6",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "laravel-mix": "^2.0.0"
   },
   "license": "ISC"
 }
